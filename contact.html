@@ -169,7 +169,7 @@
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                 
                 
-                <form id="gform" method="post" accept="https://script.google.com/macros/s/AKfycbxPbmY_mIB7YekJkHyGGp4CTHFixzsweq8kMgEHa2kU-AaJPFT94oJXfVeDd0wE8vVi/exec">
+                <form>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -314,12 +314,12 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!--
+    
     <script>
         $("#submit-form").submit((e)=>{
             e.preventDefault()
             $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbw7G-KroAKCFPlvhVifWikDEWXUIkX7-d4BlGIbtQ_E9yssozx2I40TwOXIIiQetYjc/exec",
+                url:"https://script.google.com/macros/s/AKfycbxPbmY_mIB7YekJkHyGGp4CTHFixzsweq8kMgEHa2kU-AaJPFT94oJXfVeDd0wE8vVi/exec",
                 data:$("#submit-form").serialize(),
                 method:"post",
                 success:function (response){
@@ -334,7 +334,7 @@
             })
         })
     </script>
--->
+
 
 </body>
 
