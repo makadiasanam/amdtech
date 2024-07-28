@@ -361,7 +361,7 @@
 
             console.log(JSON.stringify(data));
 
-            /*$.ajax({
+            $.ajax({
                 type: "POST",
                 url: URL,
                 dataType: "json",
@@ -373,22 +373,22 @@
                 success: function () {
                     // clear form and show a success message
                     alert("Successfull");
-                    document.getElementById("contact-form").reset();
+                    document.getElementById("gform").reset();
                     location.reload();
                 },
                 error: function () {
                     // show an error message
                     alert("UnSuccessfull");
                 }
-            });*/
+            });
 
-            fetch(URL, {
+            /*fetch(URL, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify(data),
-                    });
+                    });*/
         }
     </script>
     <!--
