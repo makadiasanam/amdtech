@@ -208,19 +208,6 @@
                             </div>
                         </div>
                     </form>
-
-                    const form = document.querySelector('form')
-                    form.addEventListener('Send Message', event => {
-                    // prevent the form submit from refreshing the page
-                    event.preventDefault()
-
-                    const { name, email, message } = event.target
-                    console.log('Name: ', name.value)
-                    console.log('email: ', email.value)
-                    console.log('Message: ', message.value)
-
-                    })
-
                 </div>
 
             </div>
@@ -337,7 +324,7 @@
     <script>
         function submitToAPI(e) {
             e.preventDefault();
-            var URL = "https://j10mmnhszk.execute-api.ap-southeast-2.amazonaws.com//sendContactEmail";
+            var URL = "https://iggob2jkk5.execute-api.ap-southeast-2.amazonaws.com/Prod/sendContactForm";
 
             var Namere = /[A-Za-z]{1}[A-Za-z]/;
             if (!Namere.test($("#name").val())) {
@@ -374,7 +361,7 @@
 
             console.log(JSON.stringify(data));
 
-            $.ajax({
+            /*$.ajax({
                 type: "POST",
                 url: URL,
                 dataType: "json",
@@ -393,7 +380,15 @@
                     // show an error message
                     alert("UnSuccessfull");
                 }
-            });
+            });*/
+
+            fetch(URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                    });
         }
     </script>
     <!--
