@@ -72,6 +72,15 @@
           border: 1px solid #ccc;
           border-top: none;
         }
+
+        /* Style the close button */
+.topright {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+.topright:hover {color: red;}
         </style>
 
 </head>
@@ -259,12 +268,13 @@
     <p>Click on the buttons inside the tabbed menu:</p>
     
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+      <button class="tablinks" onclick="openCity(event, 'London')"id="defaultOpen">London</button>
       <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
       <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
     </div>
     
     <div id="London" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
       <h3>London</h3>
       <p>London is the capital city of England.</p>
       <div class="container-xxl py-5">
@@ -387,6 +397,8 @@
       document.getElementById(cityName).style.display = "block";
       evt.currentTarget.className += " active";
     }
+    // Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
     </script>
 
 
