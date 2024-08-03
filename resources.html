@@ -49,10 +49,10 @@
         .tab button {
           background-color: #06BBCC;
           float: left;
-          border: none;
+          border: 1px solid #ccc;
           outline: none;
           cursor: pointer;
-          padding: 14px 16px;
+          padding: 14px 20px;
           transition: 0.3s;
           font-size: 17px;
         }
@@ -271,11 +271,18 @@
     
     
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'cybersecurity')"id="defaultOpen">Cyber Security</button>
+      <button class="tablinks" onclick="openCity(event, 'cad/cam/cnc')"id="defaultOpen">CAD/CAM/CNC</button>
+      <button class="tablinks" onclick="openCity(event, 'cybersecurity')">Cyber Security</button>
       <button class="tablinks" onclick="openCity(event, 'industrialsecurity')">Industrial Security</button>
-      <button class="tablinks" onclick="openCity(event, 'cad/cam/cnc')">CAD/CAM/CNC</button>
+      <button class="tablinks" onclick="openCity(event, 'automation')">Automation</button>
     </div>
     
+    <div id="cad/cam/cnc" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>CAD/CAM/CNC</h3>
+        <p>Coming Soon</p>
+      </div>
+   
     <div id="cybersecurity" class="tabcontent">
         <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
      
@@ -376,13 +383,15 @@
     </div>
     
     <div id="industrialsecurity" class="tabcontent">
+      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
       <h3>Industrial Cyber Security</h3>
       <p>Paris is the capital of France.</p> 
     </div>
     
-    <div id="cad/cam/cnc" class="tabcontent">
-      <h3>CAD/CAM/CNC</h3>
-      <p>Tokyo is the capital of Japan.</p>
+    <div id="automation" class="tabcontent">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>Automation</h3>
+      <p>Coming soon.</p>
     </div>
     
     <script>
